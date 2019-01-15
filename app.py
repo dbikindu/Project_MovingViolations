@@ -51,38 +51,24 @@ def index():
 
 
 
-@app.route("/violationdata")
-def violations():
-    """Return a detail list of information for each location"""
-    # Query all locations
-    results = session.query(Movingviolations).all()
+@app.route("/heatmap")
+def heatmap():
+    """Return the heatmap of moving violations"""
 
-    # Create a dictionary from the row data and append to a list of all_passengers
-    all_violations = []
-    for violation in results:
-        violation_dict = {}
-        violation_dict["STREET_ID"] = violation.STREET_ID
-        violation_dict["LOCATION"] = violation.LOCATION
-        violation_dict["VIOLATION_DESCRIPTION"] = violation.VIOLATION_DESCRIPTION
-        violation_dict["TOTAL_PAID"] = violation.TOTAL_PAID
-        violation_dict["LONGITUDE"] = violation.LONGITUDE
-        violation_dict["LATITUDE"] = violation.LATITUDE
-        all_violations.append(violation_dict)
+    return render_template("heatmap.html")
 
-    return jsonify(all_violations)
+@app.route("/mapmarker")
+def mapmarker():
+    """Return the map showing the cluster with concentration of moving violations"""
 
-@app.route("/violationmap")
-def violationmap():
-    """Return a detail list of information for each location"""
-    # Query all locations
-    results = session.query(Movingviolations).all()
-
-    var heatArray = [];
+    return render_template("marker.html")
 
 
+@app.route("/chartjs")
+def chartjs():
+    """Return a chart with the top 10 location with the highest fine"""
 
-
-    return jsonify(all_violations)
+    return render_template("my_chartjs.html")
 
 
 if __name__ == "__main__":
