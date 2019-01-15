@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Horizontal Bar Chart</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    
+	<style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="container" style="width: 75%;">
+		<canvas id="myChart" width="400" height="400"></canvas>
+	</div>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['600 BLK KENILWORTH AVE NE S/B', 'DC295 SW .7 MILES S/O EXIT 1 S/B', 'DC295 SW .2 MILES S/O EXIT 1 N/B', '3RD ST TUNNEL NW N/B BY MA AVE', '2200 BLOCK K ST NW E/B', '2200 BLK K ST NW W/B', '600 BLK NEW YORK AVENUE NE W/B', 'DC 295 .4 MI S/O PENN AVE SE SW/B', '100 BLK MICHIGAN AVE NW E/B', '4600 BLK MASSACHUSETTS AVE NW NW/'],
+        datasets: [{
+            label: 'Top 10 total fines collected in September 2018',
+            data: [314725, 266430, 264040, 256265, 246785, 224020, 193250, 169060, 165270, 134825],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(205, 150, 70, 0.2)',
+                'rgba(178, 278, 90, 0.2)',
+                'rgba(68, 154, 78, 0.2)',
+                'rgba(190, 88, 125, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(205, 150, 70, 1)',
+                'rgba(178, 278, 90, 1)',
+                'rgba(68, 154, 78, 1)',
+                'rgba(190, 88, 125, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+</body>
+
+</html>
