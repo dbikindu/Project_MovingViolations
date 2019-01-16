@@ -9,10 +9,10 @@
     <title>MOVING VIOLATIONS IN D.C</title>
 
     <!-- Boostrap Stylesheet -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" media="screen">
 
     <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" media="screen">
+    <link rel="stylesheet" href="static/css/styles.css" media="screen">
     <!--Chart.js-->
     <script scr="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
     <script scr="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
@@ -24,7 +24,7 @@
 
   <body>
 
-    <div class="inner-img" style="background: #6D7D8C url(https://www.dcpolicycenter.org/wp-content/uploads/2018/06/speed-cameras-feature.png) no-repeat center; background-size: cover;"></div>
+    <div class="inner-img" style="background: #6D7D8C no-repeat center; background-size: cover;"></div>
 
 
 
@@ -69,9 +69,6 @@
 					We used 'leaflet' and 'geojson' to visualize the traffic violations in District of Columbia (D.C.).
 					We also used 'chart.js' which is a library we did not cover in class for graph showing the correlation between the violation locations and the fines.
             </p>
-            <p>
-              D.C. has a complicated relationship with speed cameras. Research shows that speed cameras are an important tool to reduce crashes and traffic fatalities, especially as a complement to underlying road design improvements, and neighborhood residents frequently request them to slow traffic in dangerous areas.
-            </p>
           </article>
         </div>
 
@@ -83,7 +80,7 @@
               <h2 class="imageNav-header">Visualizations</h2>
               <hr />
               <div id="images">
-                <a href="my_chartjs.html"><img src="img1.png" alt="Top 10 Total Fines Collected in September 2018" class="imageNav-photo"></a>
+                <a href="my_chartjs.html"><img src="img1.png" strong alt="Top 10 Total Fines Collected in September 2018" class="imageNav-photo"></a>
                 <a href="heatmap.html"><img src="img2.png" alt="Heatmap" class="imageNav-photo"></a>-->
                 <a href="marker.html"><img src="img3.png" alt="Marker Cluster" class="imageNav-photo"></a>-->
               </div>
@@ -93,16 +90,15 @@
 
         </div>
 
+      <section class="row">
         <div class="col-md-6">
-            <article class="description-content">
-              <h1 class="description-header">Top 10 Total Fines Collected in September 2018</h1>
-              <hr class="description-hr"/>
-              <p>       Full and complete crash data for the city is not available, but using available data from 2008-2017, we find that many of the highest-revenue speed cameras are located in areas with high speed-related crash activity.
-              </p>
-            </article>
-          </div>
-
-        
+          <article class="description-content">
+            <h1 class="description-header">Top 10 Total Fines Collected in September 2018</h1>
+            <hr class="description-hr"/>
+            <p> After data analysis and cleaning of the datasets, a ranking of the top 10 location with the highest fines collected has been established.
+            </p>
+          </article>
+        </div>
       </section>
     </div>
     <!-- End of container -->
@@ -121,6 +117,6 @@
 
     <!-- Bootstrap CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!--/body-->
   </body>
-
 </html>
